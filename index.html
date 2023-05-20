@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>create account</title>
+    <style type="text/css">
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+        input {
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            box-shadow: 0px 0px 5px grey;
+        }
+        button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #3e8e41;
+        }
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>create account</h1>
+    <form onsubmit="return validateForm()">
+        <label for="email">email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="username">user:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">pass:</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="submit">okay</button>
+    </form>
+
+    <script type="text/javascript">
+        function validateForm() {
+            var email = document.forms[0]["email"].value.trim();
+            var username = document.forms[0]["username"].value.trim();
+            var password = document.forms[0]["password"].value.trim();
+            if (email == "" || username == "" || password == "") {
+                alert("Complate the informtion");
+                return false;
+            }
+            alert("the operation was successful");
+    }
+    </script>
+</body>
+</html>
